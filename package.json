@@ -10,6 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "hypecall": "latest"
+    "hypecall": "latest",
+    "openai": "^4.11.0"
   }
 }

@@ -1,15 +1,16 @@
 {
   "name": "hypeopenai",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "release": "npm version $(semver $npm_package_version -i patch) && npm publish --tag latest"
+    "release": "git commit -a -m ranrelease && npm version $(semver $npm_package_version -i patch) && npm publish --tag latest"
   },
   "bin": "run.js",
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "hypecall": "latest"
+    "hypecall": "latest",
+    "openai": "^4.11.0"
   }
 }

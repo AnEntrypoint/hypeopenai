@@ -1,4 +1,4 @@
-/**
+#^index.js&^/**
  * Runs a chat completion using OpenAI API.
  * @param {Object} input - The input object.
  * @param {Array} input.messages - The array of messages for the chat completion. Each message should have a role ("user" or "assistant") and content.
@@ -9,15 +9,10 @@
 const OpenAI = require("openai");
 
 const runCall = async (input) => {
-  const openai = new OpenAI({
-    apiKey: process.env["OPENAI_API_KEY"]
-  });
+  const openai = new OpenAI({ apiKey: process.env["OPENAI_API_KEY"] });
 
   const chatCompletion = await openai.chat.completions.create({
-    messages: input.messages || [{
-      role: "user",
-      content: input.question
-    }],
+    messages: input.messages || [{ role: "user", content: input.question }],
     model: input.model || "gpt-3.5-turbo"
   });
 
